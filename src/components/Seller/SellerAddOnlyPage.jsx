@@ -6,6 +6,7 @@ import {
   setSellerCards,
   setSellerRequests,
 } from "../../services/sharedState";
+import { publicAsset } from "../../utils/publicAsset";
 
 const SELLER_ID = "seller-1";
 const SELLER_LOGIN = "+998901234567";
@@ -211,7 +212,7 @@ const SellerAddOnlyPage = () => {
               {myCards.map((card) => (
                 <article key={card.id} className="border rounded-xl overflow-hidden">
                   <img
-                    src={card.image || "/logo.png"}
+                    src={card.image || publicAsset("logo.png")}
                     alt={card.title}
                     className="w-full h-44 object-cover bg-gray-100"
                   />

@@ -1,3 +1,5 @@
+import { publicAsset } from "../../utils/publicAsset";
+
 export default function NewTwo() {
   return (
     <div className="mx-auto mt-10 w-full max-w-[1450px] px-4 sm:px-6">
@@ -6,13 +8,13 @@ export default function NewTwo() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/uzum.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/taqinchoq.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/sum.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("uzum.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("taqinchoq.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("sum.jpg")} alt="" />
       </div>
 
       <div className="mt-8">
-        <img className="w-full rounded-2xl" src="/shokalad.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("shokalad.jpg")} alt="" />
       </div>
 
       <div className="mt-10 flex items-center gap-3">
@@ -20,13 +22,13 @@ export default function NewTwo() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/parfu.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/parfume.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/vitamin.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("parfu.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("parfume.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("vitamin.jpg")} alt="" />
       </div>
 
       <div className="mt-8">
-        <img className="w-full rounded-2xl" src="/texnika.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("texnika.jpg")} alt="" />
       </div>
 
       <div className="mt-10 flex items-center gap-3">
@@ -34,8 +36,8 @@ export default function NewTwo() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
-        <img className="w-full rounded-2xl" src="/libos.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/sovga.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("libos.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("sovga.jpg")} alt="" />
       </div>
 
       <div className="mt-10 flex items-center gap-3">
@@ -43,11 +45,10 @@ export default function NewTwo() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 pb-2 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/rolik.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/dacha.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/ellek.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("rolik.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("dacha.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("ellek.jpg")} alt="" />
       </div>
     </div>
   );
 }
-

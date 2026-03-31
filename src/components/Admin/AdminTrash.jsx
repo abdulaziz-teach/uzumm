@@ -1,5 +1,6 @@
 import React from "react";
 import { formatPrice, TRASH_RETENTION_MS } from "./utils/adminStorage";
+import { publicAsset } from "../../utils/publicAsset";
 
 const getDaysLeft = (deletedAt) => {
   const endAt = Number(deletedAt || 0) + TRASH_RETENTION_MS;
@@ -43,7 +44,7 @@ const AdminTrash = ({ trash, onCleanup, onRestore, onPermanentDelete }) => (
                 <td className="py-3 pr-3">
                   <div className="flex gap-3">
                     <img
-                      src={item.image || "/logo.png"}
+                      src={item.image || publicAsset("logo.png")}
                       alt={item.name}
                       className="w-12 h-12 rounded-lg object-cover bg-gray-100"
                     />

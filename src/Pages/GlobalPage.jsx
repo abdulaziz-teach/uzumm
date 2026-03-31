@@ -5,6 +5,7 @@ import Hero from "../components/hero/Hero";
 import CardPage from "../components/card/CardPage";
 import { arrData, arrData2, arrData3, arrData4 } from "../data/data";
 import { getSellerCards } from "../services/sharedState";
+import { publicAsset } from "../utils/publicAsset";
 
 const DEFAULT_COLLECTIONS = [arrData, arrData2, arrData3, arrData4];
 
@@ -67,7 +68,7 @@ const mapToCard = (item) => {
 
   return {
     link: "/",
-    img: item.image || "/logo.png",
+    img: item.image || publicAsset("logo.png"),
     price: formatNumber(item.price),
     oldPrice: item.oldPrice ? formatNumber(item.oldPrice) : "",
     tolash: monthly,

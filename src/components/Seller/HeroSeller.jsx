@@ -1,4 +1,5 @@
 import React from 'react'
+import { publicAsset } from "../../utils/publicAsset";
 
 const HeroSeller = () => {
   return (
@@ -33,7 +34,7 @@ const HeroSeller = () => {
         </div>
 
         <div className='mx-auto w-full max-w-md lg:max-w-lg'>
-          <img className='h-auto w-full rounded-md object-cover' src='./image copy.png' alt='Seller hero' />
+          <img className='h-auto w-full rounded-md object-cover' src={publicAsset("image copy.png")} alt='Seller hero' />
         </div>
       </div>
     </div>

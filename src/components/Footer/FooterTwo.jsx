@@ -1,3 +1,5 @@
+import { publicAsset } from "../../utils/publicAsset";
+
 const FooterTwo = () => {
   return (
     <footer className="bg-gray-100 px-20 py-10">
@@ -48,7 +50,7 @@ const FooterTwo = () => {
         {/* App box */}
         <div className="flex items-center gap-4 bg-white p-4 rounded-2xl max-w-sm">
           <img
-            src="/qrrrr uzumm.svg"
+            src={publicAsset("logo.png")}
             alt="QR"
             className="w-20 h-20 cursor-pointer"
           />

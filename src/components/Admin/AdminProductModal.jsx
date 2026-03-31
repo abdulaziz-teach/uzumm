@@ -1,5 +1,6 @@
 import React from "react";
 import { formatPrice } from "./utils/adminStorage";
+import { publicAsset } from "../../utils/publicAsset";
 
 const AdminProductModal = ({ item, onClose }) => {
   if (!item) return null;
@@ -25,7 +26,7 @@ const AdminProductModal = ({ item, onClose }) => {
 
         <div className="mt-4 grid md:grid-cols-[220px_1fr] gap-5">
           <img
-            src={item.image || "/logo.png"}
+            src={item.image || publicAsset("logo.png")}
             alt={item.name}
             className="h-52 w-full rounded-2xl object-cover ring-1 ring-slate-200"
           />

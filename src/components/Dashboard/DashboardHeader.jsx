@@ -8,6 +8,7 @@ import {
 } from "../../constants/storageKeys";
 import { hashPassword } from "../../utils/password";
 import { getRegisteredUsers, setRegisteredUsers } from "../../services/sharedState";
+import { publicAsset } from "../../utils/publicAsset";
 
 const ADMIN_PHONE = "123456789";
 const ADMIN_PASSWORD = "admin123";
@@ -173,7 +174,7 @@ const DashboardHeader = () => {
     <div className="w-full">
       <header className="w-full border-b border-white/10 bg-[#1F2026]">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/"> <img src="/Dashboard.jpg" alt="Dashboard logo" className="h-10 w-auto" /> </Link>
+          <Link to="/"> <img src={publicAsset("Dashboard.jpg")} alt="Dashboard logo" className="h-10 w-auto" /> </Link>
           <Link to="/register" className="text-white text-sm underline">
             Ro'yxatdan o'tish
           </Link>

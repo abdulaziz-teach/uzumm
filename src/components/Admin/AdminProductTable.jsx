@@ -1,5 +1,6 @@
 import React from "react";
 import { formatPrice } from "./utils/adminStorage";
+import { publicAsset } from "../../utils/publicAsset";
 
 const AdminProductTable = ({
   filtered,
@@ -41,7 +42,7 @@ const AdminProductTable = ({
               <td className="py-3 pr-3">
                 <div className="flex gap-3">
                   <img
-                    src={item.image || "/logo.png"}
+                    src={item.image || publicAsset("logo.png")}
                     alt={item.name}
                     className="h-12 w-12 rounded-xl object-cover ring-1 ring-slate-200"
                   />

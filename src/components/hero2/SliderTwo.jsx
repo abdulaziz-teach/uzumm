@@ -1,23 +1,24 @@
 import React from "react";
+import { publicAsset } from "../../utils/publicAsset";
 
 export default function SliderTwo() {
   return (
     <div className="mx-auto mt-4 w-full max-w-[1450px] px-4 sm:px-6">
-      <img className="w-full rounded-3xl" src="/mart.jpg" alt="" />
+      <img className="w-full rounded-3xl" src={publicAsset("mart.jpg")} alt="" />
 
       <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8">
         {[
-          ["/p.jpg", "Bahoriy kiyimlar kolleksiyasi"],
-          ["/17.jpg", "Smartfon va aksessuarlar"],
-          ["/yog.jpg", "Parfyumeriya va kosmetika"],
-          ["/delet.jpg", "Sovg'alar"],
-          ["/watch.jpg", "Elektronika xitlari"],
-          ["/q.jpg", "Har kun uchun"],
-          ["/f.jpg", "Foydali xaridlar"],
-          ["/g.jpg", "Zamonaviy yechimlar"],
+          ["p.jpg", "Bahoriy kiyimlar kolleksiyasi"],
+          ["17.jpg", "Smartfon va aksessuarlar"],
+          ["yog.jpg", "Parfyumeriya va kosmetika"],
+          ["delet.jpg", "Sovg'alar"],
+          ["watch.jpg", "Elektronika xitlari"],
+          ["q.jpg", "Har kun uchun"],
+          ["f.jpg", "Foydali xaridlar"],
+          ["g.jpg", "Zamonaviy yechimlar"],
         ].map(([img, title]) => (
           <div key={img} className="flex flex-col items-center text-center">
-            <img src={img} alt={title} className="w-28 sm:w-36" />
+            <img src={publicAsset(img)} alt={title} className="w-28 sm:w-36" />
             <h1 className="mt-2 font-medium">{title}</h1>
           </div>
         ))}
@@ -51,11 +52,10 @@ export default function SliderTwo() {
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/s.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/sensor.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/bezak.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("s.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("sensor.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("bezak.jpg")} alt="" />
       </div>
     </div>
   );
 }
-

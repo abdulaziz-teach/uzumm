@@ -1,20 +1,21 @@
 import { useState } from "react";
+import { publicAsset } from "../../utils/publicAsset";
 
 export default function New() {
   const [current, setCurrent] = useState(0);
   const [clickCount, setClickCount] = useState(0);
 
   const slides = [
-    "/1chicco.jpg",
-    "/2lego.jpg",
-    "/3lallaku.jpg",
-    "/4huggies.jpg",
-    "/5perla.jpg",
-    "/6nestle.jpg",
-    "/bonito.jpg",
-    "/kabrita.jpg",
-    "/9anex.jpg",
-  ];
+    "1chicco.jpg",
+    "2lego.jpg",
+    "3lallaku.jpg",
+    "4huggies.jpg",
+    "5perla.jpg",
+    "6nestle.jpg",
+    "bonito.jpg",
+    "kabrita.jpg",
+    "9anex.jpg",
+  ].map(publicAsset);
 
   const slideWidth = 200;
   const gap = 20;
@@ -63,13 +64,13 @@ export default function New() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/eng3.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/eng2.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/eng1.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("eng3.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("eng2.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("eng1.jpg")} alt="" />
       </div>
 
       <div className="mt-8">
-        <img className="w-full rounded-2xl" src="/nomer.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("nomer.jpg")} alt="" />
       </div>
 
       <div className="mt-10 flex items-center gap-3">
@@ -77,13 +78,13 @@ export default function New() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/123.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/1234.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/98.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("123.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("1234.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("98.jpg")} alt="" />
       </div>
 
       <div className="mt-8">
-        <img className="w-full rounded-2xl" src="/1987.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("1987.jpg")} alt="" />
       </div>
 
       <div className="mt-10 flex items-center gap-3">
@@ -91,8 +92,8 @@ export default function New() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
-        <img className="w-full rounded-2xl" src="/45.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/46.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("45.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("46.jpg")} alt="" />
       </div>
 
       <div className="mt-10 flex items-center gap-3">
@@ -100,11 +101,10 @@ export default function New() {
         <i className="fa-solid fa-chevron-right text-black"></i>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/56.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/57.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/58.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("56.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("57.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("58.jpg")} alt="" />
       </div>
     </div>
   );
 }
-

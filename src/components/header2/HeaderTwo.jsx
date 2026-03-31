@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../i18n/languageContext";
+import { publicAsset } from "../../utils/publicAsset";
 
 export default function HeaderTwo() {
   const navigate = useNavigate();
@@ -13,13 +14,13 @@ export default function HeaderTwo() {
         <img
           onClick={() => navigate("/")}
           className="w-[225px] h-[40px] cursor-pointer"
-          src="/4.png"
+          src={publicAsset("4.png")}
           alt="Logo"
         />
 
         <div className="flex items-center gap-7">
           <button className="flex items-center justify-center rounded-xl gap-3 border border-gray-300 w-[200px] h-[57px] hover:bg-gray-100 transition">
-            <img className="w-[32px]" src="/i.jpg" alt="Icon" />
+            <img className="w-[32px]" src={publicAsset("i.jpg")} alt="Icon" />
             {t("askQuestion")}
           </button>
 

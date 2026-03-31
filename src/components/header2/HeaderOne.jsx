@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../i18n/languageContext";
+import { publicAsset } from "../../utils/publicAsset";
 
 export default function YangiOne() {
   const navigate = useNavigate();
@@ -18,13 +19,13 @@ export default function YangiOne() {
         <img
           onClick={() => navigate("/")}
           className="h-[40px] w-[225px] cursor-pointer"
-          src="/4.png"
+          src={publicAsset("4.png")}
           alt="Logo"
         />
 
         <div className="flex w-full flex-wrap items-center gap-3 lg:w-auto lg:justify-end">
           <button className="flex h-[50px] w-full items-center justify-center gap-3 rounded-xl border border-gray-300 transition hover:bg-gray-100 sm:w-[220px]">
-            <img className="w-[32px]" src="/i.jpg" alt="Icon" />
+            <img className="w-[32px]" src={publicAsset("i.jpg")} alt="Icon" />
             {t("askQuestion")}
           </button>
 

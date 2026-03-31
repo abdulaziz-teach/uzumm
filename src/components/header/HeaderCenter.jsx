@@ -4,6 +4,7 @@ import { CURRENT_USER_ID_KEY, USER_ROLE_KEY } from "../../constants/storageKeys"
 import { readScopedCartItems } from "../../utils/scopedCartStorage";
 import { readScopedFavoriteItems } from "../../utils/scopedFavoritesStorage";
 import { useLanguage } from "../../i18n/languageContext";
+import { publicAsset } from "../../utils/publicAsset";
 
 const HeaderCenter = ({ onCatalogToggle }) => {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ const HeaderCenter = ({ onCatalogToggle }) => {
   return (
     <div className="flex flex-col lg:flex-row justify-between gap-3 lg:gap-6 lg:items-center py-3 px-1">
       <Link to="/">
-        <img className="" width="215px" height="32px" src="/Uzum Market Logo Vector.svg.png" alt="" />
+        <img className="" width="215px" height="32px" src={publicAsset("Uzum Market Logo Vector.svg.png")} alt="" />
       </Link>
       <form onSubmit={handleSearchSubmit} className="flex flex-wrap sm:flex-nowrap justify-between gap-2 items-center w-full">
         <button

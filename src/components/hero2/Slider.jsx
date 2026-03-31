@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { publicAsset } from "../../utils/publicAsset";
 
 export default function Slider() {
   const [current, setCurrent] = useState(0);
 
-  const slides = ["/1rasm.png", "/2rasm.png", "/3rasm.png"];
+  const slides = ["1rasm.png", "2rasm.png", "3rasm.png"].map(publicAsset);
 
   const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -34,17 +35,17 @@ export default function Slider() {
 
       <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8">
         {[
-          ["/1b.jpg", "Elektro mobillar"],
-          ["/2b.jpg", "Parvarish va gigiyena"],
-          ["/3b.jpg", "Pyure va sharbatlar"],
-          ["/4b.jpg", "Aravachalar va avtokreslolar"],
-          ["/5b.jpg", "Yangi tug'ilganlar kiyimi"],
-          ["/6b.jpg", "Bolalar kiyimlari"],
-          ["/7b.jpg", "Bolalar uchun aqlli qurilmalar"],
-          ["/8b.jpg", "Nestle"],
+          ["1b.jpg", "Elektro mobillar"],
+          ["2b.jpg", "Parvarish va gigiyena"],
+          ["3b.jpg", "Pyure va sharbatlar"],
+          ["4b.jpg", "Aravachalar va avtokreslolar"],
+          ["5b.jpg", "Yangi tug'ilganlar kiyimi"],
+          ["6b.jpg", "Bolalar kiyimlari"],
+          ["7b.jpg", "Bolalar uchun aqlli qurilmalar"],
+          ["8b.jpg", "Nestle"],
         ].map(([img, title]) => (
           <div key={img} className="flex flex-col items-center text-center">
-            <img src={img} alt={title} className="w-28 sm:w-36" />
+            <img src={publicAsset(img)} alt={title} className="w-28 sm:w-36" />
             <h1 className="mt-2 font-medium">{title}</h1>
           </div>
         ))}
@@ -78,9 +79,9 @@ export default function Slider() {
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-        <img className="w-full rounded-2xl" src="/77.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/88.jpg" alt="" />
-        <img className="w-full rounded-2xl" src="/99.jpg" alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("77.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("88.jpg")} alt="" />
+        <img className="w-full rounded-2xl" src={publicAsset("99.jpg")} alt="" />
       </div>
 
       <div className="mt-10 flex items-center gap-4">
@@ -90,4 +91,3 @@ export default function Slider() {
     </div>
   );
 }
-

@@ -7,6 +7,7 @@ import {
 } from "../../constants/storageKeys";
 import { useLanguage } from "../../i18n/languageContext";
 import { getRegisteredUsers } from "../../services/sharedState";
+import { publicAsset } from "../../utils/publicAsset";
 
 const HeaderTop = () => {
   const navigate = useNavigate();
@@ -89,7 +90,7 @@ const HeaderTop = () => {
             <li className="hidden sm:block"><Link to="/" className="text-[#4d4f59]">{t("myOrders")}</Link></li>
             <li className="relative">
               <button onClick={() => setOpenLang((prev) => !prev)} className="flex items-center gap-2">
-                <img width="25px" className="rounded-3xl" src="/bayrog.png" alt="" />
+                <img width="25px" className="rounded-3xl" src={publicAsset("bayrog.png")} alt="" />
                 {language === "ru" ? t("russian") : t("uzbek")}
               </button>
               {openLang && (
