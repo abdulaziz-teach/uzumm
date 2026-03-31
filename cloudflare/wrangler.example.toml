@@ -1,0 +1,10 @@
+name = "uzumm-shared-state"
+main = "worker.js"
+compatibility_date = "2026-03-31"
+
+[[kv_namespaces]]
+binding = "APP_STATE_KV"
+id = "YOUR_KV_NAMESPACE_ID"
+
+[vars]
+SHARED_API_TOKEN = "change-this-secret-token"
